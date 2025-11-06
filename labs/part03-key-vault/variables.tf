@@ -44,7 +44,7 @@ variable "resource_name_workload" {
 variable "resource_name_environment" {
   type        = string
   description = "The name segment for the environment"
-  default     = "dev"
+  default     = "test"
   validation {
     condition     = can(regex("^[a-z0-9]+$", var.resource_name_environment))
     error_message = "The name segment for the environment must only contain lowercase letters and numbers"
@@ -93,7 +93,7 @@ variable "subnets" {
   }))
   description = "The subnets"
   default = {
-    subnet1 = {
+    private_endpoints = {
       size                       = 24
       has_nat_gateway            = true
       has_network_security_group = true

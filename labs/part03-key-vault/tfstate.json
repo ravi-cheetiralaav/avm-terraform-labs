@@ -1,0 +1,3525 @@
+{
+    "format_version": "1.0",
+    "terraform_version": "1.12.2",
+    "values": {
+        "outputs": {
+            "resource_ids": {
+                "sensitive": false,
+                "value": {
+                    "key_vault": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.KeyVault/vaults/kvdemodevast001gto",
+                    "log_analytics_workspace": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.OperationalInsights/workspaces/law-demo-dev-australiaeast-001",
+                    "nat_gateway": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/natGateways/nat-demo-dev-australiaeast-001",
+                    "nat_gateway_public_ip": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/publicIPAddresses/pip-nat-demo-dev-australiaeast-001",
+                    "network_security_group": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/networkSecurityGroups/nsg-demo-dev-australiaeast-001",
+                    "resource_group": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001",
+                    "virtual_network": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/virtualNetworks/vnet-demo-dev-australiaeast-001"
+                },
+                "type": [
+                    "object",
+                    {
+                        "key_vault": "string",
+                        "log_analytics_workspace": "string",
+                        "nat_gateway": "string",
+                        "nat_gateway_public_ip": "string",
+                        "network_security_group": "string",
+                        "resource_group": "string",
+                        "virtual_network": "string"
+                    }
+                ]
+            },
+            "resource_names": {
+                "sensitive": false,
+                "value": {
+                    "key_vault_name": "kvdemodevast001gto",
+                    "log_analytics_workspace_name": "law-demo-dev-australiaeast-001",
+                    "nat_gateway_name": "nat-demo-dev-australiaeast-001",
+                    "nat_gateway_public_ip_name": "pip-nat-demo-dev-australiaeast-001",
+                    "network_security_group_name": "nsg-demo-dev-australiaeast-001",
+                    "resource_group_name": "rg-demo-dev-australiaeast-001",
+                    "virtual_network_name": "vnet-demo-dev-australiaeast-001"
+                },
+                "type": [
+                    "object",
+                    {
+                        "key_vault_name": "string",
+                        "log_analytics_workspace_name": "string",
+                        "nat_gateway_name": "string",
+                        "nat_gateway_public_ip_name": "string",
+                        "network_security_group_name": "string",
+                        "resource_group_name": "string",
+                        "virtual_network_name": "string"
+                    }
+                ]
+            },
+            "subnets": {
+                "sensitive": false,
+                "value": {
+                    "private_endpoints": {
+                        "address_prefixes": [
+                            "172.16.0.0/24"
+                        ],
+                        "name": "private_endpoints",
+                        "nat_gateway": {
+                            "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/natGateways/nat-demo-dev-australiaeast-001"
+                        },
+                        "network_security_group": {
+                            "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/networkSecurityGroups/nsg-demo-dev-australiaeast-001"
+                        }
+                    }
+                },
+                "type": [
+                    "object",
+                    {
+                        "private_endpoints": [
+                            "object",
+                            {
+                                "address_prefixes": [
+                                    "tuple",
+                                    [
+                                        "string"
+                                    ]
+                                ],
+                                "name": "string",
+                                "nat_gateway": [
+                                    "object",
+                                    {
+                                        "id": "string"
+                                    }
+                                ],
+                                "network_security_group": [
+                                    "object",
+                                    {
+                                        "id": "string"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "root_module": {
+            "resources": [
+                {
+                    "address": "data.azurerm_client_config.current",
+                    "mode": "data",
+                    "type": "azurerm_client_config",
+                    "name": "current",
+                    "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                    "schema_version": 0,
+                    "values": {
+                        "client_id": "04b07795-8ddb-461a-bbee-02f9e1bf7b46",
+                        "id": "Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wNGIwNzc5NS04ZGRiLTQ2MWEtYmJlZS0wMmY5ZTFiZjdiNDY7b2JqZWN0SWQ9NTJiNzFmOTktY2ZjNy00ODE0LTliZTItYzYxMGJhNjlhN2NiO3N1YnNjcmlwdGlvbklkPTVkZWE4ODM1LThjMzgtNGY0ZC04YWMyLTdhY2NkMjc4ODA3ZDt0ZW5hbnRJZD1jZjM2MTQxYy1kZGQ3LTQ1YTctYjA3My0xMTFmNjZkMGIzMGM=",
+                        "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                        "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                        "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                        "timeouts": null
+                    },
+                    "sensitive_values": {}
+                },
+                {
+                    "address": "random_string.unique_name",
+                    "mode": "managed",
+                    "type": "random_string",
+                    "name": "unique_name",
+                    "provider_name": "registry.terraform.io/hashicorp/random",
+                    "schema_version": 2,
+                    "values": {
+                        "id": "gto",
+                        "keepers": null,
+                        "length": 3,
+                        "lower": true,
+                        "min_lower": 0,
+                        "min_numeric": 0,
+                        "min_special": 0,
+                        "min_upper": 0,
+                        "number": false,
+                        "numeric": false,
+                        "override_special": null,
+                        "result": "gto",
+                        "special": false,
+                        "upper": false
+                    },
+                    "sensitive_values": {}
+                }
+            ],
+            "child_modules": [
+                {
+                    "resources": [
+                        {
+                            "address": "module.avm-utl-network-ip-addresses.data.azapi_client_config.telemetry[0]",
+                            "mode": "data",
+                            "type": "azapi_client_config",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/azapi",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "clientConfigs/subscriptionId=5dea8835-8c38-4f4d-8ac2-7accd278807d;tenantId=cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "subscription_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.avm-utl-network-ip-addresses.data.modtm_module_source.telemetry[0]",
+                            "mode": "data",
+                            "type": "modtm_module_source",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "module_path": ".terraform/modules/avm-utl-network-ip-addresses",
+                                "module_source": "registry.terraform.io/Azure/avm-utl-network-ip-addresses/azurerm",
+                                "module_version": "0.1.0"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.avm-utl-network-ip-addresses.modtm_telemetry.telemetry[0]",
+                            "mode": "managed",
+                            "type": "modtm_telemetry",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "endpoint": null,
+                                "ephemeral_number": null,
+                                "id": "fa047718-3793-4cc1-abca-dbb930a5e08f",
+                                "nonce": null,
+                                "tags": {
+                                    "module_source": "registry.terraform.io/Azure/avm-utl-network-ip-addresses/azurerm",
+                                    "module_version": "0.1.0",
+                                    "random_id": "4f29f925-fdff-b640-a853-16e9e3ec9465",
+                                    "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                    "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+                                }
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.avm-utl-network-ip-addresses.data.azapi_client_config.telemetry",
+                                "module.avm-utl-network-ip-addresses.data.modtm_module_source.telemetry",
+                                "module.avm-utl-network-ip-addresses.random_uuid.telemetry"
+                            ]
+                        },
+                        {
+                            "address": "module.avm-utl-network-ip-addresses.random_uuid.telemetry[0]",
+                            "mode": "managed",
+                            "type": "random_uuid",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/random",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "4f29f925-fdff-b640-a853-16e9e3ec9465",
+                                "keepers": null,
+                                "result": "4f29f925-fdff-b640-a853-16e9e3ec9465"
+                            },
+                            "sensitive_values": {}
+                        }
+                    ],
+                    "address": "module.avm-utl-network-ip-addresses"
+                },
+                {
+                    "resources": [
+                        {
+                            "address": "module.key_vault.data.azapi_client_config.telemetry[0]",
+                            "mode": "data",
+                            "type": "azapi_client_config",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/azapi",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "clientConfigs/subscriptionId=5dea8835-8c38-4f4d-8ac2-7accd278807d;tenantId=cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "subscription_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.key_vault.data.modtm_module_source.telemetry[0]",
+                            "mode": "data",
+                            "type": "modtm_module_source",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "module_path": ".terraform/modules/key_vault",
+                                "module_source": "registry.terraform.io/Azure/avm-res-keyvault-vault/azurerm",
+                                "module_version": "0.10.1"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.key_vault.azurerm_key_vault.this",
+                            "mode": "managed",
+                            "type": "azurerm_key_vault",
+                            "name": "this",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 2,
+                            "values": {
+                                "access_policy": [],
+                                "contact": [],
+                                "enable_rbac_authorization": true,
+                                "enabled_for_deployment": false,
+                                "enabled_for_disk_encryption": false,
+                                "enabled_for_template_deployment": false,
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.KeyVault/vaults/kvdemodevast001gto",
+                                "location": "australiaeast",
+                                "name": "kvdemodevast001gto",
+                                "network_acls": [
+                                    {
+                                        "bypass": "None",
+                                        "default_action": "Deny",
+                                        "ip_rules": null,
+                                        "virtual_network_subnet_ids": null
+                                    }
+                                ],
+                                "public_network_access_enabled": true,
+                                "purge_protection_enabled": true,
+                                "rbac_authorization_enabled": true,
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "sku_name": "premium",
+                                "soft_delete_retention_days": 90,
+                                "tags": {
+                                    "CreatedBy": "Terraform AVM Hands-on Labs",
+                                    "Environment": "Demo",
+                                    "Project": "AVM Hands-on Labs"
+                                },
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null,
+                                "vault_uri": "https://kvdemodevast001gto.vault.azure.net/"
+                            },
+                            "sensitive_values": {
+                                "access_policy": [],
+                                "contact": [],
+                                "network_acls": [
+                                    {}
+                                ],
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "data.azurerm_client_config.current",
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.key_vault.azurerm_monitor_diagnostic_setting.this[\"sendToLogAnalytics\"]",
+                            "mode": "managed",
+                            "type": "azurerm_monitor_diagnostic_setting",
+                            "name": "this",
+                            "index": "sendToLogAnalytics",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "enabled_log": [
+                                    {
+                                        "category": "",
+                                        "category_group": "allLogs",
+                                        "retention_policy": []
+                                    }
+                                ],
+                                "enabled_metric": [
+                                    {
+                                        "category": "AllMetrics"
+                                    }
+                                ],
+                                "eventhub_authorization_rule_id": "",
+                                "eventhub_name": "",
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.KeyVault/vaults/kvdemodevast001gto|custom",
+                                "log_analytics_destination_type": "Dedicated",
+                                "log_analytics_workspace_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.OperationalInsights/workspaces/law-demo-dev-australiaeast-001",
+                                "metric": [
+                                    {
+                                        "category": "AllMetrics",
+                                        "enabled": true,
+                                        "retention_policy": []
+                                    }
+                                ],
+                                "name": "custom",
+                                "partner_solution_id": null,
+                                "storage_account_id": null,
+                                "target_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.KeyVault/vaults/kvdemodevast001gto",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {
+                                "enabled_log": [
+                                    {
+                                        "retention_policy": []
+                                    }
+                                ],
+                                "enabled_metric": [
+                                    {}
+                                ],
+                                "metric": [
+                                    {
+                                        "retention_policy": []
+                                    }
+                                ]
+                            },
+                            "depends_on": [
+                                "data.azurerm_client_config.current",
+                                "module.key_vault.azurerm_key_vault.this",
+                                "module.log_analytics_workspace.azurerm_log_analytics_workspace.this",
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.key_vault.azurerm_private_endpoint.this[\"primary\"]",
+                            "mode": "managed",
+                            "type": "azurerm_private_endpoint",
+                            "name": "this",
+                            "index": "primary",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "custom_dns_configs": [],
+                                "custom_network_interface_name": "",
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/privateEndpoints/pe-kvdemodevast001gto",
+                                "ip_configuration": [],
+                                "location": "australiaeast",
+                                "name": "pe-kvdemodevast001gto",
+                                "network_interface": [
+                                    {
+                                        "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/networkInterfaces/pe-kvdemodevast001gto.nic.89e128c8-b8aa-45e1-9021-b37583ae3019",
+                                        "name": "pe-kvdemodevast001gto.nic.89e128c8-b8aa-45e1-9021-b37583ae3019"
+                                    }
+                                ],
+                                "private_dns_zone_configs": [
+                                    {
+                                        "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/privateEndpoints/pe-kvdemodevast001gto/privateDnsZoneGroups/default/privateDnsZoneConfigs/privatelink.vaultcore.azure.net",
+                                        "name": "privatelink.vaultcore.azure.net",
+                                        "private_dns_zone_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net",
+                                        "record_sets": [
+                                            {
+                                                "fqdn": "kvdemodevast001gto.privatelink.vaultcore.azure.net",
+                                                "ip_addresses": [
+                                                    "172.16.0.4"
+                                                ],
+                                                "name": "kvdemodevast001gto",
+                                                "ttl": 10,
+                                                "type": "A"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "private_dns_zone_group": [
+                                    {
+                                        "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/privateEndpoints/pe-kvdemodevast001gto/privateDnsZoneGroups/default",
+                                        "name": "default",
+                                        "private_dns_zone_ids": [
+                                            "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net"
+                                        ]
+                                    }
+                                ],
+                                "private_service_connection": [
+                                    {
+                                        "is_manual_connection": false,
+                                        "name": "pse-kvdemodevast001gto",
+                                        "private_connection_resource_alias": "",
+                                        "private_connection_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.KeyVault/vaults/kvdemodevast001gto",
+                                        "private_ip_address": "172.16.0.4",
+                                        "request_message": "",
+                                        "subresource_names": [
+                                            "vault"
+                                        ]
+                                    }
+                                ],
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "subnet_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/virtualNetworks/vnet-demo-dev-australiaeast-001/subnets/private_endpoints",
+                                "tags": {
+                                    "CreatedBy": "Terraform AVM Hands-on Labs",
+                                    "Environment": "Demo",
+                                    "Project": "AVM Hands-on Labs"
+                                },
+                                "timeouts": null
+                            },
+                            "sensitive_values": {
+                                "custom_dns_configs": [],
+                                "ip_configuration": [],
+                                "network_interface": [
+                                    {}
+                                ],
+                                "private_dns_zone_configs": [
+                                    {
+                                        "record_sets": [
+                                            {
+                                                "ip_addresses": [
+                                                    false
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "private_dns_zone_group": [
+                                    {
+                                        "private_dns_zone_ids": [
+                                            false
+                                        ]
+                                    }
+                                ],
+                                "private_service_connection": [
+                                    {
+                                        "subresource_names": [
+                                            false
+                                        ]
+                                    }
+                                ],
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "data.azurerm_client_config.current",
+                                "module.key_vault.azurerm_key_vault.this",
+                                "module.nat_gateway.azurerm_nat_gateway.this",
+                                "module.network_security_group.azurerm_network_security_group.this",
+                                "module.private_dns_zone_key_vault.azapi_resource.private_dns_zone",
+                                "module.private_dns_zone_key_vault.data.modtm_module_source.telemetry",
+                                "module.private_dns_zone_key_vault.random_uuid.telemetry",
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "module.virtual_network.azapi_resource.vnet",
+                                "module.virtual_network.data.modtm_module_source.telemetry",
+                                "module.virtual_network.module.subnet.azapi_resource.subnet",
+                                "module.virtual_network.module.subnet.azurerm_role_assignment.subnet",
+                                "module.virtual_network.random_uuid.telemetry",
+                                "random_string.unique_name"
+                            ],
+                            "identity_schema_version": 0,
+                            "identity": {
+                                "name": "pe-kvdemodevast001gto",
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d"
+                            }
+                        },
+                        {
+                            "address": "module.key_vault.azurerm_role_assignment.this[\"deployment_user_secrets\"]",
+                            "mode": "managed",
+                            "type": "azurerm_role_assignment",
+                            "name": "this",
+                            "index": "deployment_user_secrets",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "condition": "",
+                                "condition_version": "",
+                                "delegated_managed_identity_resource_id": "",
+                                "description": "",
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.KeyVault/vaults/kvdemodevast001gto/providers/Microsoft.Authorization/roleAssignments/99340816-efc1-25a8-1331-f7131e7109ff",
+                                "name": "99340816-efc1-25a8-1331-f7131e7109ff",
+                                "principal_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "principal_type": "User",
+                                "role_definition_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/providers/Microsoft.Authorization/roleDefinitions/00482a5a-887f-4fb3-b363-3b7fe8e74483",
+                                "role_definition_name": "Key Vault Administrator",
+                                "scope": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.KeyVault/vaults/kvdemodevast001gto",
+                                "skip_service_principal_aad_check": false,
+                                "timeouts": null
+                            },
+                            "sensitive_values": {},
+                            "depends_on": [
+                                "data.azurerm_client_config.current",
+                                "module.key_vault.azurerm_key_vault.this",
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.key_vault.modtm_telemetry.telemetry[0]",
+                            "mode": "managed",
+                            "type": "modtm_telemetry",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "endpoint": null,
+                                "ephemeral_number": null,
+                                "id": "7e938d96-c311-418c-abf1-f5f7870d25c3",
+                                "nonce": null,
+                                "tags": {
+                                    "location": "australiaeast",
+                                    "module_source": "registry.terraform.io/Azure/avm-res-keyvault-vault/azurerm",
+                                    "module_version": "0.10.1",
+                                    "random_id": "2cd4bc65-7075-39c7-2c16-9283102712dd",
+                                    "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                    "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+                                }
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.key_vault.data.azapi_client_config.telemetry",
+                                "module.key_vault.data.modtm_module_source.telemetry",
+                                "module.key_vault.random_uuid.telemetry"
+                            ]
+                        },
+                        {
+                            "address": "module.key_vault.random_uuid.telemetry[0]",
+                            "mode": "managed",
+                            "type": "random_uuid",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/random",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "2cd4bc65-7075-39c7-2c16-9283102712dd",
+                                "keepers": null,
+                                "result": "2cd4bc65-7075-39c7-2c16-9283102712dd"
+                            },
+                            "sensitive_values": {}
+                        }
+                    ],
+                    "address": "module.key_vault"
+                },
+                {
+                    "resources": [
+                        {
+                            "address": "module.log_analytics_workspace.data.azurerm_client_config.telemetry[0]",
+                            "mode": "data",
+                            "type": "azurerm_client_config",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "client_id": "04b07795-8ddb-461a-bbee-02f9e1bf7b46",
+                                "id": "Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wNGIwNzc5NS04ZGRiLTQ2MWEtYmJlZS0wMmY5ZTFiZjdiNDY7b2JqZWN0SWQ9NTJiNzFmOTktY2ZjNy00ODE0LTliZTItYzYxMGJhNjlhN2NiO3N1YnNjcmlwdGlvbklkPTVkZWE4ODM1LThjMzgtNGY0ZC04YWMyLTdhY2NkMjc4ODA3ZDt0ZW5hbnRJZD1jZjM2MTQxYy1kZGQ3LTQ1YTctYjA3My0xMTFmNjZkMGIzMGM=",
+                                "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.log_analytics_workspace.data.modtm_module_source.telemetry[0]",
+                            "mode": "data",
+                            "type": "modtm_module_source",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "module_path": ".terraform/modules/log_analytics_workspace",
+                                "module_source": "registry.terraform.io/Azure/avm-res-operationalinsights-workspace/azurerm",
+                                "module_version": "0.4.2"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.log_analytics_workspace.azurerm_log_analytics_workspace.this",
+                            "mode": "managed",
+                            "type": "azurerm_log_analytics_workspace",
+                            "name": "this",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 3,
+                            "values": {
+                                "allow_resource_only_permissions": true,
+                                "cmk_for_query_forced": false,
+                                "daily_quota_gb": -1,
+                                "data_collection_rule_id": "",
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.OperationalInsights/workspaces/law-demo-dev-australiaeast-001",
+                                "identity": [],
+                                "immediate_data_purge_on_30_days_enabled": false,
+                                "internet_ingestion_enabled": false,
+                                "internet_query_enabled": false,
+                                "local_authentication_disabled": false,
+                                "local_authentication_enabled": true,
+                                "location": "australiaeast",
+                                "name": "law-demo-dev-australiaeast-001",
+                                "primary_shared_key": "hIibYdr/01I2hLVr8oJA07RjnPCcvVWl5CpyPcGUFoZia0XxawPYjpUWzJNvYcPy4xfR+TFg+YIud89d+agwLw==",
+                                "reservation_capacity_in_gb_per_day": null,
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "retention_in_days": 30,
+                                "secondary_shared_key": "BrIS1WMmh6G/3HMC5zBlH0NQ1ULhgk4G4Ca7Nv2S4nCZT+P5MjZEPmYvzCFcDxAe6+rasAdj/1HlvRLtQMrpeQ==",
+                                "sku": "PerGB2018",
+                                "tags": {
+                                    "CreatedBy": "Terraform AVM Hands-on Labs",
+                                    "Environment": "Demo",
+                                    "Project": "AVM Hands-on Labs"
+                                },
+                                "timeouts": null,
+                                "workspace_id": "2c19448b-c68e-4068-ac44-d582c85ea543"
+                            },
+                            "sensitive_values": {
+                                "identity": [],
+                                "primary_shared_key": true,
+                                "secondary_shared_key": true,
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.log_analytics_workspace.modtm_telemetry.telemetry[0]",
+                            "mode": "managed",
+                            "type": "modtm_telemetry",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "endpoint": null,
+                                "ephemeral_number": null,
+                                "id": "537395d2-3d56-4358-97b9-df9d6d2ab779",
+                                "nonce": null,
+                                "tags": {
+                                    "module_source": "registry.terraform.io/Azure/avm-res-operationalinsights-workspace/azurerm",
+                                    "module_version": "0.4.2",
+                                    "random_id": "41384fc0-6d88-b3c9-0636-5550a5d57c1c",
+                                    "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                    "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+                                }
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.log_analytics_workspace.data.azurerm_client_config.telemetry",
+                                "module.log_analytics_workspace.data.modtm_module_source.telemetry",
+                                "module.log_analytics_workspace.random_uuid.telemetry"
+                            ]
+                        },
+                        {
+                            "address": "module.log_analytics_workspace.random_uuid.telemetry[0]",
+                            "mode": "managed",
+                            "type": "random_uuid",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/random",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "41384fc0-6d88-b3c9-0636-5550a5d57c1c",
+                                "keepers": null,
+                                "result": "41384fc0-6d88-b3c9-0636-5550a5d57c1c"
+                            },
+                            "sensitive_values": {}
+                        }
+                    ],
+                    "address": "module.log_analytics_workspace"
+                },
+                {
+                    "resources": [
+                        {
+                            "address": "module.nat_gateway.data.azurerm_client_config.telemetry[0]",
+                            "mode": "data",
+                            "type": "azurerm_client_config",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "client_id": "04b07795-8ddb-461a-bbee-02f9e1bf7b46",
+                                "id": "Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wNGIwNzc5NS04ZGRiLTQ2MWEtYmJlZS0wMmY5ZTFiZjdiNDY7b2JqZWN0SWQ9NTJiNzFmOTktY2ZjNy00ODE0LTliZTItYzYxMGJhNjlhN2NiO3N1YnNjcmlwdGlvbklkPTVkZWE4ODM1LThjMzgtNGY0ZC04YWMyLTdhY2NkMjc4ODA3ZDt0ZW5hbnRJZD1jZjM2MTQxYy1kZGQ3LTQ1YTctYjA3My0xMTFmNjZkMGIzMGM=",
+                                "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.nat_gateway.data.modtm_module_source.telemetry[0]",
+                            "mode": "data",
+                            "type": "modtm_module_source",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "module_path": ".terraform/modules/nat_gateway",
+                                "module_source": "registry.terraform.io/Azure/avm-res-network-natgateway/azurerm",
+                                "module_version": "0.2.1"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.nat_gateway.azurerm_nat_gateway.this",
+                            "mode": "managed",
+                            "type": "azurerm_nat_gateway",
+                            "name": "this",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/natGateways/nat-demo-dev-australiaeast-001",
+                                "idle_timeout_in_minutes": 4,
+                                "location": "australiaeast",
+                                "name": "nat-demo-dev-australiaeast-001",
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "resource_guid": "5578f63a-e42a-4f65-83e4-641376da3f23",
+                                "sku_name": "Standard",
+                                "tags": null,
+                                "timeouts": null,
+                                "zones": null
+                            },
+                            "sensitive_values": {},
+                            "depends_on": [
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ],
+                            "identity_schema_version": 0,
+                            "identity": {
+                                "name": "nat-demo-dev-australiaeast-001",
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d"
+                            }
+                        },
+                        {
+                            "address": "module.nat_gateway.azurerm_nat_gateway_public_ip_association.this[\"default\"]",
+                            "mode": "managed",
+                            "type": "azurerm_nat_gateway_public_ip_association",
+                            "name": "this",
+                            "index": "default",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/natGateways/nat-demo-dev-australiaeast-001|/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/publicIPAddresses/pip-nat-demo-dev-australiaeast-001",
+                                "nat_gateway_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/natGateways/nat-demo-dev-australiaeast-001",
+                                "public_ip_address_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/publicIPAddresses/pip-nat-demo-dev-australiaeast-001",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {},
+                            "depends_on": [
+                                "module.nat_gateway.azurerm_nat_gateway.this",
+                                "module.nat_gateway.azurerm_public_ip.this",
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.nat_gateway.azurerm_public_ip.this[\"default\"]",
+                            "mode": "managed",
+                            "type": "azurerm_public_ip",
+                            "name": "this",
+                            "index": "default",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "allocation_method": "Static",
+                                "ddos_protection_mode": "VirtualNetworkInherited",
+                                "ddos_protection_plan_id": null,
+                                "domain_name_label": null,
+                                "domain_name_label_scope": null,
+                                "edge_zone": "",
+                                "fqdn": null,
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/publicIPAddresses/pip-nat-demo-dev-australiaeast-001",
+                                "idle_timeout_in_minutes": 30,
+                                "ip_address": "4.237.116.46",
+                                "ip_tags": null,
+                                "ip_version": "IPv4",
+                                "location": "australiaeast",
+                                "name": "pip-nat-demo-dev-australiaeast-001",
+                                "public_ip_prefix_id": null,
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "reverse_fqdn": null,
+                                "sku": "Standard",
+                                "sku_tier": "Regional",
+                                "tags": null,
+                                "timeouts": null,
+                                "zones": [
+                                    "1",
+                                    "2",
+                                    "3"
+                                ]
+                            },
+                            "sensitive_values": {
+                                "zones": [
+                                    false,
+                                    false,
+                                    false
+                                ]
+                            },
+                            "depends_on": [
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.nat_gateway.modtm_telemetry.telemetry[0]",
+                            "mode": "managed",
+                            "type": "modtm_telemetry",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "endpoint": null,
+                                "ephemeral_number": null,
+                                "id": "54248b73-f026-4b1e-8019-58ae3929ea51",
+                                "nonce": null,
+                                "tags": {
+                                    "module_source": "registry.terraform.io/Azure/avm-res-network-natgateway/azurerm",
+                                    "module_version": "0.2.1",
+                                    "random_id": "d606b835-dd41-7089-449c-5b10241ee7c3",
+                                    "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                    "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+                                }
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.nat_gateway.data.azurerm_client_config.telemetry",
+                                "module.nat_gateway.data.modtm_module_source.telemetry",
+                                "module.nat_gateway.random_uuid.telemetry"
+                            ]
+                        },
+                        {
+                            "address": "module.nat_gateway.random_uuid.telemetry[0]",
+                            "mode": "managed",
+                            "type": "random_uuid",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/random",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "d606b835-dd41-7089-449c-5b10241ee7c3",
+                                "keepers": null,
+                                "result": "d606b835-dd41-7089-449c-5b10241ee7c3"
+                            },
+                            "sensitive_values": {}
+                        }
+                    ],
+                    "address": "module.nat_gateway"
+                },
+                {
+                    "resources": [
+                        {
+                            "address": "module.network_security_group.data.azurerm_client_config.telemetry[0]",
+                            "mode": "data",
+                            "type": "azurerm_client_config",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "client_id": "04b07795-8ddb-461a-bbee-02f9e1bf7b46",
+                                "id": "Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wNGIwNzc5NS04ZGRiLTQ2MWEtYmJlZS0wMmY5ZTFiZjdiNDY7b2JqZWN0SWQ9NTJiNzFmOTktY2ZjNy00ODE0LTliZTItYzYxMGJhNjlhN2NiO3N1YnNjcmlwdGlvbklkPTVkZWE4ODM1LThjMzgtNGY0ZC04YWMyLTdhY2NkMjc4ODA3ZDt0ZW5hbnRJZD1jZjM2MTQxYy1kZGQ3LTQ1YTctYjA3My0xMTFmNjZkMGIzMGM=",
+                                "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.network_security_group.data.modtm_module_source.telemetry[0]",
+                            "mode": "data",
+                            "type": "modtm_module_source",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "module_path": ".terraform/modules/network_security_group",
+                                "module_source": "registry.terraform.io/Azure/avm-res-network-networksecuritygroup/azurerm",
+                                "module_version": "0.5.0"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.network_security_group.azurerm_monitor_diagnostic_setting.this[\"sendToLogAnalytics\"]",
+                            "mode": "managed",
+                            "type": "azurerm_monitor_diagnostic_setting",
+                            "name": "this",
+                            "index": "sendToLogAnalytics",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "enabled_log": [
+                                    {
+                                        "category": "",
+                                        "category_group": "allLogs",
+                                        "retention_policy": []
+                                    }
+                                ],
+                                "enabled_metric": [],
+                                "eventhub_authorization_rule_id": "",
+                                "eventhub_name": "",
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/networkSecurityGroups/nsg-demo-dev-australiaeast-001|custom",
+                                "log_analytics_destination_type": "",
+                                "log_analytics_workspace_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.OperationalInsights/workspaces/law-demo-dev-australiaeast-001",
+                                "metric": [],
+                                "name": "custom",
+                                "partner_solution_id": null,
+                                "storage_account_id": null,
+                                "target_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/networkSecurityGroups/nsg-demo-dev-australiaeast-001",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {
+                                "enabled_log": [
+                                    {
+                                        "retention_policy": []
+                                    }
+                                ],
+                                "enabled_metric": [],
+                                "metric": []
+                            },
+                            "depends_on": [
+                                "module.log_analytics_workspace.azurerm_log_analytics_workspace.this",
+                                "module.network_security_group.azurerm_network_security_group.this",
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.network_security_group.azurerm_network_security_group.this",
+                            "mode": "managed",
+                            "type": "azurerm_network_security_group",
+                            "name": "this",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/networkSecurityGroups/nsg-demo-dev-australiaeast-001",
+                                "location": "australiaeast",
+                                "name": "nsg-demo-dev-australiaeast-001",
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "security_rule": [],
+                                "tags": {
+                                    "CreatedBy": "Terraform AVM Hands-on Labs",
+                                    "Environment": "Demo",
+                                    "Project": "AVM Hands-on Labs"
+                                },
+                                "timeouts": null
+                            },
+                            "sensitive_values": {
+                                "security_rule": [],
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ],
+                            "identity_schema_version": 0,
+                            "identity": {
+                                "name": "nsg-demo-dev-australiaeast-001",
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d"
+                            }
+                        },
+                        {
+                            "address": "module.network_security_group.azurerm_network_security_rule.this[\"no_internet\"]",
+                            "mode": "managed",
+                            "type": "azurerm_network_security_rule",
+                            "name": "this",
+                            "index": "no_internet",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "access": "Deny",
+                                "description": "",
+                                "destination_address_prefix": "Internet",
+                                "destination_address_prefixes": null,
+                                "destination_application_security_group_ids": null,
+                                "destination_port_range": "*",
+                                "destination_port_ranges": null,
+                                "direction": "Outbound",
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/networkSecurityGroups/nsg-demo-dev-australiaeast-001/securityRules/block-internet-traffic",
+                                "name": "block-internet-traffic",
+                                "network_security_group_name": "nsg-demo-dev-australiaeast-001",
+                                "priority": 100,
+                                "protocol": "*",
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "source_address_prefix": "*",
+                                "source_address_prefixes": null,
+                                "source_application_security_group_ids": null,
+                                "source_port_range": "*",
+                                "source_port_ranges": null,
+                                "timeouts": null
+                            },
+                            "sensitive_values": {},
+                            "depends_on": [
+                                "module.network_security_group.azurerm_network_security_group.this",
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ],
+                            "identity_schema_version": 0,
+                            "identity": {
+                                "name": "block-internet-traffic",
+                                "network_security_group_name": "nsg-demo-dev-australiaeast-001",
+                                "resource_group_name": "rg-demo-dev-australiaeast-001",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d"
+                            }
+                        },
+                        {
+                            "address": "module.network_security_group.modtm_telemetry.telemetry[0]",
+                            "mode": "managed",
+                            "type": "modtm_telemetry",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "endpoint": null,
+                                "ephemeral_number": null,
+                                "id": "f532ea56-78cc-4766-98fc-e3cda9cef5eb",
+                                "nonce": null,
+                                "tags": {
+                                    "module_source": "registry.terraform.io/Azure/avm-res-network-networksecuritygroup/azurerm",
+                                    "module_version": "0.5.0",
+                                    "random_id": "532c45ff-3f45-bb33-dd6c-08afcc85ba81",
+                                    "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                    "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+                                }
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.network_security_group.data.azurerm_client_config.telemetry",
+                                "module.network_security_group.data.modtm_module_source.telemetry",
+                                "module.network_security_group.random_uuid.telemetry"
+                            ]
+                        },
+                        {
+                            "address": "module.network_security_group.random_uuid.telemetry[0]",
+                            "mode": "managed",
+                            "type": "random_uuid",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/random",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "532c45ff-3f45-bb33-dd6c-08afcc85ba81",
+                                "keepers": null,
+                                "result": "532c45ff-3f45-bb33-dd6c-08afcc85ba81"
+                            },
+                            "sensitive_values": {}
+                        }
+                    ],
+                    "address": "module.network_security_group"
+                },
+                {
+                    "resources": [
+                        {
+                            "address": "module.private_dns_zone_key_vault.data.azapi_client_config.telemetry[0]",
+                            "mode": "data",
+                            "type": "azapi_client_config",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/azapi",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "clientConfigs/subscriptionId=5dea8835-8c38-4f4d-8ac2-7accd278807d;tenantId=cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "subscription_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.private_dns_zone_key_vault.data.modtm_module_source.telemetry[0]",
+                            "mode": "data",
+                            "type": "modtm_module_source",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "module_path": ".terraform/modules/private_dns_zone_key_vault",
+                                "module_source": "registry.terraform.io/Azure/avm-res-network-privatednszone/azurerm",
+                                "module_version": "0.4.2"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.private_dns_zone_key_vault.azapi_resource.private_dns_zone",
+                            "mode": "managed",
+                            "type": "azapi_resource",
+                            "name": "private_dns_zone",
+                            "provider_name": "registry.terraform.io/azure/azapi",
+                            "schema_version": 2,
+                            "values": {
+                                "body": null,
+                                "create_headers": {
+                                    "User-Agent": "avm=true avm_module_source=registry.terraform.io/Azure/avm-res-network-privatednszone/azurerm avm_module_version=0.4.2 random_id=11a86936-c0a5-b7f6-1e48-ef9c78600eec"
+                                },
+                                "create_query_parameters": null,
+                                "delete_headers": {
+                                    "User-Agent": "avm=true avm_module_source=registry.terraform.io/Azure/avm-res-network-privatednszone/azurerm avm_module_version=0.4.2 random_id=11a86936-c0a5-b7f6-1e48-ef9c78600eec"
+                                },
+                                "delete_query_parameters": null,
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net",
+                                "identity": [],
+                                "ignore_casing": false,
+                                "ignore_missing_property": true,
+                                "ignore_null_property": false,
+                                "location": "global",
+                                "locks": null,
+                                "name": "privatelink.vaultcore.azure.net",
+                                "output": {
+                                    "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net",
+                                    "location": "global",
+                                    "name": "privatelink.vaultcore.azure.net",
+                                    "numberOfRecordSets": 1,
+                                    "numberOfVirtualNetworkLinks": 0,
+                                    "numberOfVirtualNetworkLinksWithRegistration": 0,
+                                    "tags": {
+                                        "CreatedBy": "Terraform AVM Hands-on Labs",
+                                        "Environment": "Demo",
+                                        "Project": "AVM Hands-on Labs"
+                                    },
+                                    "type": "Microsoft.Network/privateDnsZones"
+                                },
+                                "parent_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001",
+                                "read_headers": {
+                                    "User-Agent": "avm=true avm_module_source=registry.terraform.io/Azure/avm-res-network-privatednszone/azurerm avm_module_version=0.4.2 random_id=11a86936-c0a5-b7f6-1e48-ef9c78600eec"
+                                },
+                                "read_query_parameters": null,
+                                "replace_triggers_external_values": null,
+                                "replace_triggers_refs": null,
+                                "response_export_values": {
+                                    "id": "id",
+                                    "location": "location",
+                                    "name": "name",
+                                    "numberOfRecordSets": "properties.numberOfRecordSets",
+                                    "numberOfVirtualNetworkLinks": "properties.numberOfVirtualNetworkLinks",
+                                    "numberOfVirtualNetworkLinksWithRegistration": "properties.numberOfVirtualNetworkLinksWithRegistration",
+                                    "tags": "tags",
+                                    "type": "type"
+                                },
+                                "retry": {
+                                    "error_message_regex": [
+                                        "ReferencedResourceNotProvisioned",
+                                        "CannotDeleteResource"
+                                    ],
+                                    "interval_seconds": 10,
+                                    "max_interval_seconds": 180,
+                                    "multiplier": 1.5,
+                                    "randomization_factor": 0.5
+                                },
+                                "schema_validation_enabled": true,
+                                "sensitive_body": null,
+                                "sensitive_body_version": null,
+                                "tags": {
+                                    "CreatedBy": "Terraform AVM Hands-on Labs",
+                                    "Environment": "Demo",
+                                    "Project": "AVM Hands-on Labs"
+                                },
+                                "timeouts": {
+                                    "create": "30m",
+                                    "delete": "30m",
+                                    "read": "5m",
+                                    "update": "30m"
+                                },
+                                "type": "Microsoft.Network/privateDnsZones@2024-06-01",
+                                "update_headers": {
+                                    "User-Agent": "avm=true avm_module_source=registry.terraform.io/Azure/avm-res-network-privatednszone/azurerm avm_module_version=0.4.2 random_id=11a86936-c0a5-b7f6-1e48-ef9c78600eec"
+                                },
+                                "update_query_parameters": null
+                            },
+                            "sensitive_values": {
+                                "create_headers": {},
+                                "delete_headers": {},
+                                "identity": [],
+                                "output": {
+                                    "tags": {}
+                                },
+                                "read_headers": {},
+                                "response_export_values": {},
+                                "retry": {
+                                    "error_message_regex": [
+                                        false,
+                                        false
+                                    ]
+                                },
+                                "tags": {},
+                                "timeouts": {},
+                                "update_headers": {}
+                            },
+                            "depends_on": [
+                                "module.private_dns_zone_key_vault.data.modtm_module_source.telemetry",
+                                "module.private_dns_zone_key_vault.random_uuid.telemetry",
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.private_dns_zone_key_vault.modtm_telemetry.telemetry[0]",
+                            "mode": "managed",
+                            "type": "modtm_telemetry",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "endpoint": null,
+                                "ephemeral_number": null,
+                                "id": "f52a4fe3-a35e-4f78-bebe-5e735270ef73",
+                                "nonce": null,
+                                "tags": {
+                                    "location": "unknown",
+                                    "module_source": "registry.terraform.io/Azure/avm-res-network-privatednszone/azurerm",
+                                    "module_version": "0.4.2",
+                                    "random_id": "11a86936-c0a5-b7f6-1e48-ef9c78600eec",
+                                    "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                    "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+                                }
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.private_dns_zone_key_vault.data.azapi_client_config.telemetry",
+                                "module.private_dns_zone_key_vault.data.modtm_module_source.telemetry",
+                                "module.private_dns_zone_key_vault.random_uuid.telemetry"
+                            ]
+                        },
+                        {
+                            "address": "module.private_dns_zone_key_vault.random_uuid.telemetry[0]",
+                            "mode": "managed",
+                            "type": "random_uuid",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/random",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "11a86936-c0a5-b7f6-1e48-ef9c78600eec",
+                                "keepers": null,
+                                "result": "11a86936-c0a5-b7f6-1e48-ef9c78600eec"
+                            },
+                            "sensitive_values": {}
+                        }
+                    ],
+                    "address": "module.private_dns_zone_key_vault",
+                    "child_modules": [
+                        {
+                            "resources": [
+                                {
+                                    "address": "module.private_dns_zone_key_vault.module.avm_interfaces.data.azapi_client_config.telemetry[0]",
+                                    "mode": "data",
+                                    "type": "azapi_client_config",
+                                    "name": "telemetry",
+                                    "index": 0,
+                                    "provider_name": "registry.terraform.io/azure/azapi",
+                                    "schema_version": 0,
+                                    "values": {
+                                        "id": "clientConfigs/subscriptionId=5dea8835-8c38-4f4d-8ac2-7accd278807d;tenantId=cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                        "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                        "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                        "subscription_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                        "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                        "timeouts": null
+                                    },
+                                    "sensitive_values": {}
+                                },
+                                {
+                                    "address": "module.private_dns_zone_key_vault.module.avm_interfaces.data.modtm_module_source.telemetry[0]",
+                                    "mode": "data",
+                                    "type": "modtm_module_source",
+                                    "name": "telemetry",
+                                    "index": 0,
+                                    "provider_name": "registry.terraform.io/azure/modtm",
+                                    "schema_version": 0,
+                                    "values": {
+                                        "module_path": ".terraform/modules/private_dns_zone_key_vault.avm_interfaces",
+                                        "module_source": "registry.terraform.io/Azure/avm-utl-interfaces/azure",
+                                        "module_version": "0.2.0"
+                                    },
+                                    "sensitive_values": {}
+                                },
+                                {
+                                    "address": "module.private_dns_zone_key_vault.module.avm_interfaces.modtm_telemetry.telemetry[0]",
+                                    "mode": "managed",
+                                    "type": "modtm_telemetry",
+                                    "name": "telemetry",
+                                    "index": 0,
+                                    "provider_name": "registry.terraform.io/azure/modtm",
+                                    "schema_version": 0,
+                                    "values": {
+                                        "endpoint": null,
+                                        "ephemeral_number": null,
+                                        "id": "87873f58-5944-43fa-b659-0cf543ac7955",
+                                        "nonce": null,
+                                        "tags": {
+                                            "module_source": "registry.terraform.io/Azure/avm-utl-interfaces/azure",
+                                            "module_version": "0.2.0",
+                                            "random_id": "89bd50c5-ee82-9f55-4ea6-95c2497cff19",
+                                            "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                            "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+                                        }
+                                    },
+                                    "sensitive_values": {
+                                        "tags": {}
+                                    },
+                                    "depends_on": [
+                                        "module.private_dns_zone_key_vault.module.avm_interfaces.data.azapi_client_config.telemetry",
+                                        "module.private_dns_zone_key_vault.module.avm_interfaces.data.modtm_module_source.telemetry",
+                                        "module.private_dns_zone_key_vault.module.avm_interfaces.random_uuid.telemetry"
+                                    ]
+                                },
+                                {
+                                    "address": "module.private_dns_zone_key_vault.module.avm_interfaces.random_uuid.telemetry[0]",
+                                    "mode": "managed",
+                                    "type": "random_uuid",
+                                    "name": "telemetry",
+                                    "index": 0,
+                                    "provider_name": "registry.terraform.io/hashicorp/random",
+                                    "schema_version": 0,
+                                    "values": {
+                                        "id": "89bd50c5-ee82-9f55-4ea6-95c2497cff19",
+                                        "keepers": null,
+                                        "result": "89bd50c5-ee82-9f55-4ea6-95c2497cff19"
+                                    },
+                                    "sensitive_values": {}
+                                }
+                            ],
+                            "address": "module.private_dns_zone_key_vault.module.avm_interfaces"
+                        },
+                        {
+                            "resources": [
+                                {
+                                    "address": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"].azapi_resource.private_dns_zone_network_link",
+                                    "mode": "managed",
+                                    "type": "azapi_resource",
+                                    "name": "private_dns_zone_network_link",
+                                    "provider_name": "registry.terraform.io/azure/azapi",
+                                    "schema_version": 2,
+                                    "values": {
+                                        "body": {
+                                            "properties": {
+                                                "registrationEnabled": false,
+                                                "resolutionPolicy": null,
+                                                "virtualNetwork": {
+                                                    "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/virtualNetworks/vnet-demo-dev-australiaeast-001"
+                                                }
+                                            }
+                                        },
+                                        "create_headers": null,
+                                        "create_query_parameters": null,
+                                        "delete_headers": null,
+                                        "delete_query_parameters": null,
+                                        "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net/virtualNetworkLinks/key-vault",
+                                        "identity": [],
+                                        "ignore_casing": false,
+                                        "ignore_missing_property": true,
+                                        "ignore_null_property": true,
+                                        "location": "global",
+                                        "locks": null,
+                                        "name": "key-vault",
+                                        "output": {
+                                            "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net/virtualNetworkLinks/key-vault",
+                                            "name": "key-vault",
+                                            "registration_enabled": false,
+                                            "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks",
+                                            "virtual_network": {
+                                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/virtualNetworks/vnet-demo-dev-australiaeast-001"
+                                            }
+                                        },
+                                        "parent_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/privateDnsZones/privatelink.vaultcore.azure.net",
+                                        "read_headers": null,
+                                        "read_query_parameters": null,
+                                        "replace_triggers_external_values": null,
+                                        "replace_triggers_refs": null,
+                                        "response_export_values": {
+                                            "id": "id",
+                                            "name": "name",
+                                            "registration_enabled": "properties.registrationEnabled",
+                                            "type": "type",
+                                            "virtual_network": "properties.virtualNetwork"
+                                        },
+                                        "retry": {
+                                            "error_message_regex": [
+                                                "ReferencedResourceNotProvisioned",
+                                                "CannotDeleteResource"
+                                            ],
+                                            "interval_seconds": 10,
+                                            "max_interval_seconds": 180,
+                                            "multiplier": 1.5,
+                                            "randomization_factor": 0.5
+                                        },
+                                        "schema_validation_enabled": true,
+                                        "sensitive_body": null,
+                                        "sensitive_body_version": null,
+                                        "tags": null,
+                                        "timeouts": {
+                                            "create": "30m",
+                                            "delete": "30m",
+                                            "read": "5m",
+                                            "update": "30m"
+                                        },
+                                        "type": "Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01",
+                                        "update_headers": null,
+                                        "update_query_parameters": null
+                                    },
+                                    "sensitive_values": {
+                                        "body": {
+                                            "properties": {
+                                                "virtualNetwork": {}
+                                            }
+                                        },
+                                        "identity": [],
+                                        "output": {
+                                            "virtual_network": {}
+                                        },
+                                        "response_export_values": {},
+                                        "retry": {
+                                            "error_message_regex": [
+                                                false,
+                                                false
+                                            ]
+                                        },
+                                        "timeouts": {}
+                                    },
+                                    "depends_on": [
+                                        "module.private_dns_zone_key_vault.azapi_resource.private_dns_zone",
+                                        "module.private_dns_zone_key_vault.data.modtm_module_source.telemetry",
+                                        "module.private_dns_zone_key_vault.random_uuid.telemetry",
+                                        "module.regions.data.azapi_client_config.current",
+                                        "module.regions.data.azapi_resource_action.locations",
+                                        "module.resource_group.azurerm_resource_group.this",
+                                        "module.virtual_network.azapi_resource.vnet",
+                                        "module.virtual_network.data.modtm_module_source.telemetry",
+                                        "module.virtual_network.random_uuid.telemetry",
+                                        "random_string.unique_name"
+                                    ]
+                                }
+                            ],
+                            "address": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"]"
+                        }
+                    ]
+                },
+                {
+                    "resources": [
+                        {
+                            "address": "module.regions.data.azapi_client_config.current",
+                            "mode": "data",
+                            "type": "azapi_client_config",
+                            "name": "current",
+                            "provider_name": "registry.terraform.io/azure/azapi",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "clientConfigs/subscriptionId=5dea8835-8c38-4f4d-8ac2-7accd278807d;tenantId=cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "subscription_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.regions.data.azapi_client_config.telemetry[0]",
+                            "mode": "data",
+                            "type": "azapi_client_config",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/azapi",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "clientConfigs/subscriptionId=5dea8835-8c38-4f4d-8ac2-7accd278807d;tenantId=cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "subscription_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.regions.data.modtm_module_source.telemetry[0]",
+                            "mode": "data",
+                            "type": "modtm_module_source",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "module_path": ".terraform/modules/regions",
+                                "module_source": "registry.terraform.io/Azure/avm-utl-regions/azurerm",
+                                "module_version": "0.5.0"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.regions.modtm_telemetry.telemetry[0]",
+                            "mode": "managed",
+                            "type": "modtm_telemetry",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "endpoint": null,
+                                "ephemeral_number": null,
+                                "id": "b40146f6-3f32-4adb-ba09-f8d33cce4fe0",
+                                "nonce": null,
+                                "tags": {
+                                    "module_source": "registry.terraform.io/Azure/avm-utl-regions/azurerm",
+                                    "module_version": "0.5.0",
+                                    "random_id": "3d8f7845-b1f3-44d2-bc3e-696f8ac64d0a",
+                                    "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                    "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+                                }
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.regions.data.azapi_client_config.telemetry",
+                                "module.regions.data.modtm_module_source.telemetry",
+                                "module.regions.random_uuid.telemetry"
+                            ]
+                        },
+                        {
+                            "address": "module.regions.random_uuid.telemetry[0]",
+                            "mode": "managed",
+                            "type": "random_uuid",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/random",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "3d8f7845-b1f3-44d2-bc3e-696f8ac64d0a",
+                                "keepers": null,
+                                "result": "3d8f7845-b1f3-44d2-bc3e-696f8ac64d0a"
+                            },
+                            "sensitive_values": {}
+                        }
+                    ],
+                    "address": "module.regions"
+                },
+                {
+                    "resources": [
+                        {
+                            "address": "module.resource_group.data.azurerm_client_config.telemetry[0]",
+                            "mode": "data",
+                            "type": "azurerm_client_config",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "client_id": "04b07795-8ddb-461a-bbee-02f9e1bf7b46",
+                                "id": "Y2xpZW50Q29uZmlncy9jbGllbnRJZD0wNGIwNzc5NS04ZGRiLTQ2MWEtYmJlZS0wMmY5ZTFiZjdiNDY7b2JqZWN0SWQ9NTJiNzFmOTktY2ZjNy00ODE0LTliZTItYzYxMGJhNjlhN2NiO3N1YnNjcmlwdGlvbklkPTVkZWE4ODM1LThjMzgtNGY0ZC04YWMyLTdhY2NkMjc4ODA3ZDt0ZW5hbnRJZD1jZjM2MTQxYy1kZGQ3LTQ1YTctYjA3My0xMTFmNjZkMGIzMGM=",
+                                "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.resource_group.data.azurerm_subscription.current",
+                            "mode": "data",
+                            "type": "azurerm_subscription",
+                            "name": "current",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "display_name": "Visual Studio Professional Subscription",
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "location_placement_id": "PublicAndAustralia_2014-09-01",
+                                "quota_id": "MSDN_2014-09-01",
+                                "spending_limit": "On",
+                                "state": "Enabled",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tags": {},
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            }
+                        },
+                        {
+                            "address": "module.resource_group.data.modtm_module_source.telemetry[0]",
+                            "mode": "data",
+                            "type": "modtm_module_source",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "module_path": ".terraform/modules/resource_group",
+                                "module_source": "registry.terraform.io/Azure/avm-res-resources-resourcegroup/azurerm",
+                                "module_version": "0.2.1"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.resource_group.azurerm_resource_group.this",
+                            "mode": "managed",
+                            "type": "azurerm_resource_group",
+                            "name": "this",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001",
+                                "location": "australiaeast",
+                                "managed_by": "",
+                                "name": "rg-demo-dev-australiaeast-001",
+                                "tags": {
+                                    "CreatedBy": "Terraform AVM Hands-on Labs",
+                                    "Environment": "Demo",
+                                    "Project": "AVM Hands-on Labs"
+                                },
+                                "timeouts": null
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.resource_group.modtm_telemetry.telemetry[0]",
+                            "mode": "managed",
+                            "type": "modtm_telemetry",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "endpoint": null,
+                                "ephemeral_number": null,
+                                "id": "fa176154-150f-46a2-b2f1-35977062e00b",
+                                "nonce": null,
+                                "tags": {
+                                    "module_source": "registry.terraform.io/Azure/avm-res-resources-resourcegroup/azurerm",
+                                    "module_version": "0.2.1",
+                                    "random_id": "279e26b7-4cae-d106-57ff-00047cdbff90",
+                                    "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                    "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+                                }
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.resource_group.data.azurerm_client_config.telemetry",
+                                "module.resource_group.data.modtm_module_source.telemetry",
+                                "module.resource_group.random_uuid.telemetry"
+                            ]
+                        },
+                        {
+                            "address": "module.resource_group.random_uuid.telemetry[0]",
+                            "mode": "managed",
+                            "type": "random_uuid",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/random",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "279e26b7-4cae-d106-57ff-00047cdbff90",
+                                "keepers": null,
+                                "result": "279e26b7-4cae-d106-57ff-00047cdbff90"
+                            },
+                            "sensitive_values": {}
+                        }
+                    ],
+                    "address": "module.resource_group"
+                },
+                {
+                    "resources": [
+                        {
+                            "address": "module.virtual_network.data.azapi_client_config.telemetry[0]",
+                            "mode": "data",
+                            "type": "azapi_client_config",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/azapi",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "clientConfigs/subscriptionId=5dea8835-8c38-4f4d-8ac2-7accd278807d;tenantId=cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "object_id": "52b71f99-cfc7-4814-9be2-c610ba69a7cb",
+                                "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "subscription_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.virtual_network.data.modtm_module_source.telemetry[0]",
+                            "mode": "data",
+                            "type": "modtm_module_source",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "module_path": ".terraform/modules/virtual_network",
+                                "module_source": "registry.terraform.io/Azure/avm-res-network-virtualnetwork/azurerm",
+                                "module_version": "0.14.1"
+                            },
+                            "sensitive_values": {}
+                        },
+                        {
+                            "address": "module.virtual_network.azapi_resource.vnet",
+                            "mode": "managed",
+                            "type": "azapi_resource",
+                            "name": "vnet",
+                            "provider_name": "registry.terraform.io/azure/azapi",
+                            "schema_version": 2,
+                            "values": {
+                                "body": {
+                                    "extendedLocation": null,
+                                    "properties": {
+                                        "addressSpace": {
+                                            "addressPrefixes": [
+                                                "172.16.0.0/12"
+                                            ]
+                                        },
+                                        "bgpCommunities": null,
+                                        "ddosProtectionPlan": null,
+                                        "dhcpOptions": null,
+                                        "enableDdosProtection": false,
+                                        "enableVmProtection": false,
+                                        "encryption": null,
+                                        "flowTimeoutInMinutes": null
+                                    }
+                                },
+                                "create_headers": {
+                                    "User-Agent": "avm=true avm_module_source=registry.terraform.io/Azure/avm-res-network-virtualnetwork/azurerm avm_module_version=0.14.1 random_id=5620c3b9-4d39-476e-0df8-28f80948d3e4"
+                                },
+                                "create_query_parameters": null,
+                                "delete_headers": {
+                                    "User-Agent": "avm=true avm_module_source=registry.terraform.io/Azure/avm-res-network-virtualnetwork/azurerm avm_module_version=0.14.1 random_id=5620c3b9-4d39-476e-0df8-28f80948d3e4"
+                                },
+                                "delete_query_parameters": null,
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/virtualNetworks/vnet-demo-dev-australiaeast-001",
+                                "identity": [],
+                                "ignore_casing": false,
+                                "ignore_missing_property": true,
+                                "ignore_null_property": false,
+                                "location": "australiaeast",
+                                "locks": null,
+                                "name": "vnet-demo-dev-australiaeast-001",
+                                "output": {},
+                                "parent_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001",
+                                "read_headers": {
+                                    "User-Agent": "avm=true avm_module_source=registry.terraform.io/Azure/avm-res-network-virtualnetwork/azurerm avm_module_version=0.14.1 random_id=5620c3b9-4d39-476e-0df8-28f80948d3e4"
+                                },
+                                "read_query_parameters": null,
+                                "replace_triggers_external_values": null,
+                                "replace_triggers_refs": null,
+                                "response_export_values": [],
+                                "retry": {
+                                    "error_message_regex": [
+                                        "ReferencedResourceNotProvisioned"
+                                    ],
+                                    "interval_seconds": 10,
+                                    "max_interval_seconds": 180,
+                                    "multiplier": 1.5,
+                                    "randomization_factor": 0.5
+                                },
+                                "schema_validation_enabled": true,
+                                "sensitive_body": null,
+                                "sensitive_body_version": null,
+                                "tags": {
+                                    "CreatedBy": "Terraform AVM Hands-on Labs",
+                                    "Environment": "Demo",
+                                    "Project": "AVM Hands-on Labs"
+                                },
+                                "timeouts": {
+                                    "create": "30m",
+                                    "delete": "30m",
+                                    "read": "5m",
+                                    "update": "30m"
+                                },
+                                "type": "Microsoft.Network/virtualNetworks@2024-07-01",
+                                "update_headers": {
+                                    "User-Agent": "avm=true avm_module_source=registry.terraform.io/Azure/avm-res-network-virtualnetwork/azurerm avm_module_version=0.14.1 random_id=5620c3b9-4d39-476e-0df8-28f80948d3e4"
+                                },
+                                "update_query_parameters": null
+                            },
+                            "sensitive_values": {
+                                "body": {
+                                    "properties": {
+                                        "addressSpace": {
+                                            "addressPrefixes": [
+                                                false
+                                            ]
+                                        }
+                                    }
+                                },
+                                "create_headers": {},
+                                "delete_headers": {},
+                                "identity": [],
+                                "output": {},
+                                "read_headers": {},
+                                "response_export_values": [],
+                                "retry": {
+                                    "error_message_regex": [
+                                        false
+                                    ]
+                                },
+                                "tags": {},
+                                "timeouts": {},
+                                "update_headers": {}
+                            },
+                            "depends_on": [
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "module.virtual_network.data.modtm_module_source.telemetry",
+                                "module.virtual_network.random_uuid.telemetry",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.virtual_network.azurerm_monitor_diagnostic_setting.this[\"sendToLogAnalytics\"]",
+                            "mode": "managed",
+                            "type": "azurerm_monitor_diagnostic_setting",
+                            "name": "this",
+                            "index": "sendToLogAnalytics",
+                            "provider_name": "registry.terraform.io/hashicorp/azurerm",
+                            "schema_version": 0,
+                            "values": {
+                                "enabled_log": [
+                                    {
+                                        "category": "",
+                                        "category_group": "allLogs",
+                                        "retention_policy": []
+                                    }
+                                ],
+                                "enabled_metric": [
+                                    {
+                                        "category": "AllMetrics"
+                                    }
+                                ],
+                                "eventhub_authorization_rule_id": "",
+                                "eventhub_name": "",
+                                "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/virtualNetworks/vnet-demo-dev-australiaeast-001|custom",
+                                "log_analytics_destination_type": "",
+                                "log_analytics_workspace_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.OperationalInsights/workspaces/law-demo-dev-australiaeast-001",
+                                "metric": [
+                                    {
+                                        "category": "AllMetrics",
+                                        "enabled": true,
+                                        "retention_policy": [
+                                            {
+                                                "days": 0,
+                                                "enabled": false
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "name": "custom",
+                                "partner_solution_id": null,
+                                "storage_account_id": null,
+                                "target_resource_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/virtualNetworks/vnet-demo-dev-australiaeast-001",
+                                "timeouts": null
+                            },
+                            "sensitive_values": {
+                                "enabled_log": [
+                                    {
+                                        "retention_policy": []
+                                    }
+                                ],
+                                "enabled_metric": [
+                                    {}
+                                ],
+                                "metric": [
+                                    {
+                                        "retention_policy": [
+                                            {}
+                                        ]
+                                    }
+                                ]
+                            },
+                            "depends_on": [
+                                "module.log_analytics_workspace.azurerm_log_analytics_workspace.this",
+                                "module.regions.data.azapi_client_config.current",
+                                "module.regions.data.azapi_resource_action.locations",
+                                "module.resource_group.azurerm_resource_group.this",
+                                "module.virtual_network.azapi_resource.vnet",
+                                "module.virtual_network.data.modtm_module_source.telemetry",
+                                "module.virtual_network.random_uuid.telemetry",
+                                "random_string.unique_name"
+                            ]
+                        },
+                        {
+                            "address": "module.virtual_network.modtm_telemetry.telemetry[0]",
+                            "mode": "managed",
+                            "type": "modtm_telemetry",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/azure/modtm",
+                            "schema_version": 0,
+                            "values": {
+                                "endpoint": null,
+                                "ephemeral_number": null,
+                                "id": "05dd20aa-2224-4ece-b206-616353b8a585",
+                                "nonce": null,
+                                "tags": {
+                                    "location": "australiaeast",
+                                    "module_source": "registry.terraform.io/Azure/avm-res-network-virtualnetwork/azurerm",
+                                    "module_version": "0.14.1",
+                                    "random_id": "5620c3b9-4d39-476e-0df8-28f80948d3e4",
+                                    "subscription_id": "5dea8835-8c38-4f4d-8ac2-7accd278807d",
+                                    "tenant_id": "cf36141c-ddd7-45a7-b073-111f66d0b30c"
+                                }
+                            },
+                            "sensitive_values": {
+                                "tags": {}
+                            },
+                            "depends_on": [
+                                "module.virtual_network.data.azapi_client_config.telemetry",
+                                "module.virtual_network.data.modtm_module_source.telemetry",
+                                "module.virtual_network.random_uuid.telemetry"
+                            ]
+                        },
+                        {
+                            "address": "module.virtual_network.random_uuid.telemetry[0]",
+                            "mode": "managed",
+                            "type": "random_uuid",
+                            "name": "telemetry",
+                            "index": 0,
+                            "provider_name": "registry.terraform.io/hashicorp/random",
+                            "schema_version": 0,
+                            "values": {
+                                "id": "5620c3b9-4d39-476e-0df8-28f80948d3e4",
+                                "keepers": null,
+                                "result": "5620c3b9-4d39-476e-0df8-28f80948d3e4"
+                            },
+                            "sensitive_values": {}
+                        }
+                    ],
+                    "address": "module.virtual_network",
+                    "child_modules": [
+                        {
+                            "resources": [
+                                {
+                                    "address": "module.virtual_network.module.subnet[\"private_endpoints\"].azapi_resource.subnet",
+                                    "mode": "managed",
+                                    "type": "azapi_resource",
+                                    "name": "subnet",
+                                    "provider_name": "registry.terraform.io/azure/azapi",
+                                    "schema_version": 2,
+                                    "values": {
+                                        "body": {
+                                            "properties": {
+                                                "addressPrefix": null,
+                                                "addressPrefixes": [
+                                                    "172.16.0.0/24"
+                                                ],
+                                                "defaultOutboundAccess": false,
+                                                "delegations": [],
+                                                "ipamPoolPrefixAllocations": null,
+                                                "natGateway": {
+                                                    "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/natGateways/nat-demo-dev-australiaeast-001"
+                                                },
+                                                "networkSecurityGroup": {
+                                                    "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/networkSecurityGroups/nsg-demo-dev-australiaeast-001"
+                                                },
+                                                "privateEndpointNetworkPolicies": "Enabled",
+                                                "privateLinkServiceNetworkPolicies": "Enabled",
+                                                "routeTable": null,
+                                                "serviceEndpointPolicies": null,
+                                                "serviceEndpoints": null,
+                                                "sharingScope": null
+                                            }
+                                        },
+                                        "create_headers": null,
+                                        "create_query_parameters": null,
+                                        "delete_headers": null,
+                                        "delete_query_parameters": null,
+                                        "id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/virtualNetworks/vnet-demo-dev-australiaeast-001/subnets/private_endpoints",
+                                        "identity": [],
+                                        "ignore_casing": false,
+                                        "ignore_missing_property": true,
+                                        "ignore_null_property": true,
+                                        "location": null,
+                                        "locks": [
+                                            "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/virtualNetworks/vnet-demo-dev-australiaeast-001"
+                                        ],
+                                        "name": "private_endpoints",
+                                        "output": {},
+                                        "parent_id": "/subscriptions/5dea8835-8c38-4f4d-8ac2-7accd278807d/resourceGroups/rg-demo-dev-australiaeast-001/providers/Microsoft.Network/virtualNetworks/vnet-demo-dev-australiaeast-001",
+                                        "read_headers": null,
+                                        "read_query_parameters": null,
+                                        "replace_triggers_external_values": null,
+                                        "replace_triggers_refs": null,
+                                        "response_export_values": [],
+                                        "retry": {
+                                            "error_message_regex": [
+                                                "ReferencedResourceNotProvisioned"
+                                            ],
+                                            "interval_seconds": 10,
+                                            "max_interval_seconds": 180,
+                                            "multiplier": 1.5,
+                                            "randomization_factor": 0.5
+                                        },
+                                        "schema_validation_enabled": true,
+                                        "sensitive_body": null,
+                                        "sensitive_body_version": null,
+                                        "tags": null,
+                                        "timeouts": {
+                                            "create": "30m",
+                                            "delete": "30m",
+                                            "read": "5m",
+                                            "update": "30m"
+                                        },
+                                        "type": "Microsoft.Network/virtualNetworks/subnets@2024-07-01",
+                                        "update_headers": null,
+                                        "update_query_parameters": null
+                                    },
+                                    "sensitive_values": {
+                                        "body": {
+                                            "properties": {
+                                                "addressPrefixes": [
+                                                    false
+                                                ],
+                                                "delegations": [],
+                                                "natGateway": {},
+                                                "networkSecurityGroup": {}
+                                            }
+                                        },
+                                        "identity": [],
+                                        "locks": [
+                                            false
+                                        ],
+                                        "output": {},
+                                        "response_export_values": [],
+                                        "retry": {
+                                            "error_message_regex": [
+                                                false
+                                            ]
+                                        },
+                                        "timeouts": {}
+                                    },
+                                    "depends_on": [
+                                        "module.nat_gateway.azurerm_nat_gateway.this",
+                                        "module.network_security_group.azurerm_network_security_group.this",
+                                        "module.regions.data.azapi_client_config.current",
+                                        "module.regions.data.azapi_resource_action.locations",
+                                        "module.resource_group.azurerm_resource_group.this",
+                                        "module.virtual_network.azapi_resource.vnet",
+                                        "module.virtual_network.data.modtm_module_source.telemetry",
+                                        "module.virtual_network.random_uuid.telemetry",
+                                        "random_string.unique_name"
+                                    ]
+                                }
+                            ],
+                            "address": "module.virtual_network.module.subnet[\"private_endpoints\"]"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "checks": [
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.avm-utl-network-ip-addresses",
+                "name": "address_space",
+                "to_display": "module.avm-utl-network-ip-addresses.var.address_space"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.avm-utl-network-ip-addresses",
+                        "to_display": "module.avm-utl-network-ip-addresses.var.address_space"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault.module.keys",
+                "name": "expiration_date",
+                "to_display": "module.key_vault.module.keys.var.expiration_date"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault.module.keys",
+                "name": "key_vault_resource_id",
+                "to_display": "module.key_vault.module.keys.var.key_vault_resource_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault.module.keys",
+                "name": "not_before_date",
+                "to_display": "module.key_vault.module.keys.var.not_before_date"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault.module.secrets",
+                "name": "expiration_date",
+                "to_display": "module.key_vault.module.secrets.var.expiration_date"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault.module.secrets",
+                "name": "key_vault_resource_id",
+                "to_display": "module.key_vault.module.secrets.var.key_vault_resource_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault.module.secrets",
+                "name": "name",
+                "to_display": "module.key_vault.module.secrets.var.name"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault.module.secrets",
+                "name": "not_before_date",
+                "to_display": "module.key_vault.module.secrets.var.not_before_date"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault",
+                "name": "diagnostic_settings",
+                "to_display": "module.key_vault.var.diagnostic_settings"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.key_vault",
+                        "to_display": "module.key_vault.var.diagnostic_settings"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault",
+                "name": "legacy_access_policies",
+                "to_display": "module.key_vault.var.legacy_access_policies"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.key_vault",
+                        "to_display": "module.key_vault.var.legacy_access_policies"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault",
+                "name": "lock",
+                "to_display": "module.key_vault.var.lock"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.key_vault",
+                        "to_display": "module.key_vault.var.lock"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault",
+                "name": "name",
+                "to_display": "module.key_vault.var.name"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.key_vault",
+                        "to_display": "module.key_vault.var.name"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault",
+                "name": "network_acls",
+                "to_display": "module.key_vault.var.network_acls"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.key_vault",
+                        "to_display": "module.key_vault.var.network_acls"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault",
+                "name": "sku_name",
+                "to_display": "module.key_vault.var.sku_name"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.key_vault",
+                        "to_display": "module.key_vault.var.sku_name"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault",
+                "name": "soft_delete_retention_days",
+                "to_display": "module.key_vault.var.soft_delete_retention_days"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.key_vault",
+                        "to_display": "module.key_vault.var.soft_delete_retention_days"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.key_vault",
+                "name": "tenant_id",
+                "to_display": "module.key_vault.var.tenant_id"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.key_vault",
+                        "to_display": "module.key_vault.var.tenant_id"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.log_analytics_workspace",
+                "name": "diagnostic_settings",
+                "to_display": "module.log_analytics_workspace.var.diagnostic_settings"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.log_analytics_workspace",
+                        "to_display": "module.log_analytics_workspace.var.diagnostic_settings"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.log_analytics_workspace",
+                "name": "lock",
+                "to_display": "module.log_analytics_workspace.var.lock"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.log_analytics_workspace",
+                        "to_display": "module.log_analytics_workspace.var.lock"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.log_analytics_workspace",
+                "name": "name",
+                "to_display": "module.log_analytics_workspace.var.name"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.log_analytics_workspace",
+                        "to_display": "module.log_analytics_workspace.var.name"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.nat_gateway",
+                "name": "lock",
+                "to_display": "module.nat_gateway.var.lock"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.nat_gateway",
+                        "to_display": "module.nat_gateway.var.lock"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.nat_gateway",
+                "name": "public_ip_prefix_length",
+                "to_display": "module.nat_gateway.var.public_ip_prefix_length"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.nat_gateway",
+                        "to_display": "module.nat_gateway.var.public_ip_prefix_length"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.network_security_group",
+                "name": "diagnostic_settings",
+                "to_display": "module.network_security_group.var.diagnostic_settings"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.network_security_group",
+                        "to_display": "module.network_security_group.var.diagnostic_settings"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.network_security_group",
+                "name": "lock",
+                "to_display": "module.network_security_group.var.lock"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.network_security_group",
+                        "to_display": "module.network_security_group.var.lock"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.network_security_group",
+                "name": "name",
+                "to_display": "module.network_security_group.var.name"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.network_security_group",
+                        "to_display": "module.network_security_group.var.name"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.a_record",
+                "name": "ip_addresses",
+                "to_display": "module.private_dns_zone_key_vault.module.a_record.var.ip_addresses"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.a_record",
+                "name": "name",
+                "to_display": "module.private_dns_zone_key_vault.module.a_record.var.name"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.a_record",
+                "name": "parent_id",
+                "to_display": "module.private_dns_zone_key_vault.module.a_record.var.parent_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.a_record",
+                "name": "timeouts",
+                "to_display": "module.private_dns_zone_key_vault.module.a_record.var.timeouts"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.a_record",
+                "name": "ttl",
+                "to_display": "module.private_dns_zone_key_vault.module.a_record.var.ttl"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.aaaa_record",
+                "name": "name",
+                "to_display": "module.private_dns_zone_key_vault.module.aaaa_record.var.name"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.aaaa_record",
+                "name": "parent_id",
+                "to_display": "module.private_dns_zone_key_vault.module.aaaa_record.var.parent_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.aaaa_record",
+                "name": "timeouts",
+                "to_display": "module.private_dns_zone_key_vault.module.aaaa_record.var.timeouts"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.aaaa_record",
+                "name": "ttl",
+                "to_display": "module.private_dns_zone_key_vault.module.aaaa_record.var.ttl"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.avm_interfaces",
+                "name": "diagnostic_settings",
+                "to_display": "module.private_dns_zone_key_vault.module.avm_interfaces.var.diagnostic_settings"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault.module.avm_interfaces",
+                        "to_display": "module.private_dns_zone_key_vault.module.avm_interfaces.var.diagnostic_settings"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.avm_interfaces",
+                "name": "lock",
+                "to_display": "module.private_dns_zone_key_vault.module.avm_interfaces.var.lock"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault.module.avm_interfaces",
+                        "to_display": "module.private_dns_zone_key_vault.module.avm_interfaces.var.lock"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.avm_interfaces",
+                "name": "private_endpoints_scope",
+                "to_display": "module.private_dns_zone_key_vault.module.avm_interfaces.var.private_endpoints_scope"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault.module.avm_interfaces",
+                        "to_display": "module.private_dns_zone_key_vault.module.avm_interfaces.var.private_endpoints_scope"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.avm_interfaces",
+                "name": "role_assignment_definition_scope",
+                "to_display": "module.private_dns_zone_key_vault.module.avm_interfaces.var.role_assignment_definition_scope"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault.module.avm_interfaces",
+                        "to_display": "module.private_dns_zone_key_vault.module.avm_interfaces.var.role_assignment_definition_scope"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.cname_record",
+                "name": "cname",
+                "to_display": "module.private_dns_zone_key_vault.module.cname_record.var.cname"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.cname_record",
+                "name": "name",
+                "to_display": "module.private_dns_zone_key_vault.module.cname_record.var.name"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.cname_record",
+                "name": "parent_id",
+                "to_display": "module.private_dns_zone_key_vault.module.cname_record.var.parent_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.cname_record",
+                "name": "timeouts",
+                "to_display": "module.private_dns_zone_key_vault.module.cname_record.var.timeouts"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.cname_record",
+                "name": "ttl",
+                "to_display": "module.private_dns_zone_key_vault.module.cname_record.var.ttl"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.mx_record",
+                "name": "name",
+                "to_display": "module.private_dns_zone_key_vault.module.mx_record.var.name"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.mx_record",
+                "name": "parent_id",
+                "to_display": "module.private_dns_zone_key_vault.module.mx_record.var.parent_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.mx_record",
+                "name": "records",
+                "to_display": "module.private_dns_zone_key_vault.module.mx_record.var.records"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.mx_record",
+                "name": "timeouts",
+                "to_display": "module.private_dns_zone_key_vault.module.mx_record.var.timeouts"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.mx_record",
+                "name": "ttl",
+                "to_display": "module.private_dns_zone_key_vault.module.mx_record.var.ttl"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.ptr_record",
+                "name": "domain_names",
+                "to_display": "module.private_dns_zone_key_vault.module.ptr_record.var.domain_names"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.ptr_record",
+                "name": "name",
+                "to_display": "module.private_dns_zone_key_vault.module.ptr_record.var.name"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.ptr_record",
+                "name": "parent_id",
+                "to_display": "module.private_dns_zone_key_vault.module.ptr_record.var.parent_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.ptr_record",
+                "name": "timeouts",
+                "to_display": "module.private_dns_zone_key_vault.module.ptr_record.var.timeouts"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.ptr_record",
+                "name": "ttl",
+                "to_display": "module.private_dns_zone_key_vault.module.ptr_record.var.ttl"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.srv_record",
+                "name": "name",
+                "to_display": "module.private_dns_zone_key_vault.module.srv_record.var.name"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.srv_record",
+                "name": "parent_id",
+                "to_display": "module.private_dns_zone_key_vault.module.srv_record.var.parent_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.srv_record",
+                "name": "records",
+                "to_display": "module.private_dns_zone_key_vault.module.srv_record.var.records"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.srv_record",
+                "name": "timeouts",
+                "to_display": "module.private_dns_zone_key_vault.module.srv_record.var.timeouts"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.srv_record",
+                "name": "ttl",
+                "to_display": "module.private_dns_zone_key_vault.module.srv_record.var.ttl"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.txt_record",
+                "name": "name",
+                "to_display": "module.private_dns_zone_key_vault.module.txt_record.var.name"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.txt_record",
+                "name": "parent_id",
+                "to_display": "module.private_dns_zone_key_vault.module.txt_record.var.parent_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.txt_record",
+                "name": "records",
+                "to_display": "module.private_dns_zone_key_vault.module.txt_record.var.records"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.txt_record",
+                "name": "timeouts",
+                "to_display": "module.private_dns_zone_key_vault.module.txt_record.var.timeouts"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.txt_record",
+                "name": "ttl",
+                "to_display": "module.private_dns_zone_key_vault.module.txt_record.var.ttl"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.virtual_network_links",
+                "name": "name",
+                "to_display": "module.private_dns_zone_key_vault.module.virtual_network_links.var.name"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"]",
+                        "to_display": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"].var.name"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.virtual_network_links",
+                "name": "parent_id",
+                "to_display": "module.private_dns_zone_key_vault.module.virtual_network_links.var.parent_id"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"]",
+                        "to_display": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"].var.parent_id"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.virtual_network_links",
+                "name": "resolution_policy",
+                "to_display": "module.private_dns_zone_key_vault.module.virtual_network_links.var.resolution_policy"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"]",
+                        "to_display": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"].var.resolution_policy"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.virtual_network_links",
+                "name": "timeouts",
+                "to_display": "module.private_dns_zone_key_vault.module.virtual_network_links.var.timeouts"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"]",
+                        "to_display": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"].var.timeouts"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault.module.virtual_network_links",
+                "name": "virtual_network_id",
+                "to_display": "module.private_dns_zone_key_vault.module.virtual_network_links.var.virtual_network_id"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"]",
+                        "to_display": "module.private_dns_zone_key_vault.module.virtual_network_links[\"vnetlink1\"].var.virtual_network_id"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault",
+                "name": "a_records",
+                "to_display": "module.private_dns_zone_key_vault.var.a_records"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault",
+                        "to_display": "module.private_dns_zone_key_vault.var.a_records"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault",
+                "name": "aaaa_records",
+                "to_display": "module.private_dns_zone_key_vault.var.aaaa_records"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault",
+                        "to_display": "module.private_dns_zone_key_vault.var.aaaa_records"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault",
+                "name": "cname_records",
+                "to_display": "module.private_dns_zone_key_vault.var.cname_records"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault",
+                        "to_display": "module.private_dns_zone_key_vault.var.cname_records"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault",
+                "name": "parent_id",
+                "to_display": "module.private_dns_zone_key_vault.var.parent_id"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault",
+                        "to_display": "module.private_dns_zone_key_vault.var.parent_id"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault",
+                "name": "ptr_records",
+                "to_display": "module.private_dns_zone_key_vault.var.ptr_records"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault",
+                        "to_display": "module.private_dns_zone_key_vault.var.ptr_records"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.private_dns_zone_key_vault",
+                "name": "virtual_network_links",
+                "to_display": "module.private_dns_zone_key_vault.var.virtual_network_links"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.private_dns_zone_key_vault",
+                        "to_display": "module.private_dns_zone_key_vault.var.virtual_network_links"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.resource_group",
+                "name": "lock",
+                "to_display": "module.resource_group.var.lock"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.resource_group",
+                        "to_display": "module.resource_group.var.lock"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.resource_group",
+                "name": "name",
+                "to_display": "module.resource_group.var.name"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.resource_group",
+                        "to_display": "module.resource_group.var.name"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.resource_group",
+                "name": "role_assignments",
+                "to_display": "module.resource_group.var.role_assignments"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.resource_group",
+                        "to_display": "module.resource_group.var.role_assignments"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.peering",
+                "name": "parent_id",
+                "to_display": "module.virtual_network.module.peering.var.parent_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.peering",
+                "name": "peer_complete_vnets",
+                "to_display": "module.virtual_network.module.peering.var.peer_complete_vnets"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.peering",
+                "name": "remote_virtual_network_id",
+                "to_display": "module.virtual_network.module.peering.var.remote_virtual_network_id"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.peering",
+                "name": "reverse_peer_complete_vnets",
+                "to_display": "module.virtual_network.module.peering.var.reverse_peer_complete_vnets"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.peering",
+                "name": "sync_remote_address_space_triggers",
+                "to_display": "module.virtual_network.module.peering.var.sync_remote_address_space_triggers"
+            },
+            "status": "pass"
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.subnet",
+                "name": "ipam_pools",
+                "to_display": "module.virtual_network.module.subnet.var.ipam_pools"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network.module.subnet[\"private_endpoints\"]",
+                        "to_display": "module.virtual_network.module.subnet[\"private_endpoints\"].var.ipam_pools"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.subnet",
+                "name": "parent_id",
+                "to_display": "module.virtual_network.module.subnet.var.parent_id"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network.module.subnet[\"private_endpoints\"]",
+                        "to_display": "module.virtual_network.module.subnet[\"private_endpoints\"].var.parent_id"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.subnet",
+                "name": "private_endpoint_network_policies",
+                "to_display": "module.virtual_network.module.subnet.var.private_endpoint_network_policies"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network.module.subnet[\"private_endpoints\"]",
+                        "to_display": "module.virtual_network.module.subnet[\"private_endpoints\"].var.private_endpoint_network_policies"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.subnet",
+                "name": "service_endpoints",
+                "to_display": "module.virtual_network.module.subnet.var.service_endpoints"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network.module.subnet[\"private_endpoints\"]",
+                        "to_display": "module.virtual_network.module.subnet[\"private_endpoints\"].var.service_endpoints"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.subnet",
+                "name": "service_endpoints_with_location",
+                "to_display": "module.virtual_network.module.subnet.var.service_endpoints_with_location"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network.module.subnet[\"private_endpoints\"]",
+                        "to_display": "module.virtual_network.module.subnet[\"private_endpoints\"].var.service_endpoints_with_location"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network.module.subnet",
+                "name": "sharing_scope",
+                "to_display": "module.virtual_network.module.subnet.var.sharing_scope"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network.module.subnet[\"private_endpoints\"]",
+                        "to_display": "module.virtual_network.module.subnet[\"private_endpoints\"].var.sharing_scope"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network",
+                "name": "address_space",
+                "to_display": "module.virtual_network.var.address_space"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network",
+                        "to_display": "module.virtual_network.var.address_space"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network",
+                "name": "diagnostic_settings",
+                "to_display": "module.virtual_network.var.diagnostic_settings"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network",
+                        "to_display": "module.virtual_network.var.diagnostic_settings"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network",
+                "name": "encryption",
+                "to_display": "module.virtual_network.var.encryption"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network",
+                        "to_display": "module.virtual_network.var.encryption"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network",
+                "name": "extended_location",
+                "to_display": "module.virtual_network.var.extended_location"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network",
+                        "to_display": "module.virtual_network.var.extended_location"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network",
+                "name": "ipam_pools",
+                "to_display": "module.virtual_network.var.ipam_pools"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network",
+                        "to_display": "module.virtual_network.var.ipam_pools"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network",
+                "name": "lock",
+                "to_display": "module.virtual_network.var.lock"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network",
+                        "to_display": "module.virtual_network.var.lock"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network",
+                "name": "parent_id",
+                "to_display": "module.virtual_network.var.parent_id"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network",
+                        "to_display": "module.virtual_network.var.parent_id"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "module": "module.virtual_network",
+                "name": "subnets",
+                "to_display": "module.virtual_network.var.subnets"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "module": "module.virtual_network",
+                        "to_display": "module.virtual_network.var.subnets"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "name": "location",
+                "to_display": "var.location"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "to_display": "var.location"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "name": "resource_name_environment",
+                "to_display": "var.resource_name_environment"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "to_display": "var.resource_name_environment"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "name": "resource_name_location_short",
+                "to_display": "var.resource_name_location_short"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "to_display": "var.resource_name_location_short"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "name": "resource_name_sequence_start",
+                "to_display": "var.resource_name_sequence_start"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "to_display": "var.resource_name_sequence_start"
+                    },
+                    "status": "pass"
+                }
+            ]
+        },
+        {
+            "address": {
+                "kind": "var",
+                "name": "resource_name_workload",
+                "to_display": "var.resource_name_workload"
+            },
+            "status": "pass",
+            "instances": [
+                {
+                    "address": {
+                        "to_display": "var.resource_name_workload"
+                    },
+                    "status": "pass"
+                }
+            ]
+        }
+    ]
+}
