@@ -9,6 +9,7 @@ variable "location" {
     condition     = length(var.location) <= 20
     error_message = "The location must be 20 characters or less"
   }
+  default     = "australiaeast"
 }
 
 variable "resource_name_workload" {
@@ -28,7 +29,7 @@ variable "resource_name_workload" {
 variable "resource_name_environment" {
   type        = string
   description = "The name segment for the environment"
-  default     = "dev"
+  default     = "uat"
   validation {
     condition     = can(regex("^[a-z0-9]+$", var.resource_name_environment))
     error_message = "The name segment for the environment must only contain lowercase letters and numbers"
@@ -61,4 +62,9 @@ variable "resource_name_templates" {
 variable "tags" {
   type        = map(string)
   description = "A map of tags to add to all resources"
+  default     = {
+     type = "avm"
+     env  = "demo"
+  }
 }
+
