@@ -9,12 +9,14 @@ variable "location" {
     condition     = length(var.location) <= 20
     error_message = "The location must be 20 characters or less"
   }
+  default     = "australiaeast"
+
 }
 
 variable "resource_name_location_short" {
   type        = string
   description = "The short name segment for the location"
-  default     = ""
+  default     = "ast"
   validation {
     condition     = length(var.resource_name_location_short) == 0 || can(regex("^[a-z]+$", var.resource_name_location_short))
     error_message = "The short name segment for the location must only contain lowercase letters"
@@ -80,6 +82,7 @@ variable "resource_name_templates" {
 variable "address_space" {
   type        = string
   description = "The address space that is used the virtual network"
+  default = "172.16.0.0/12"
 }
 
 variable "subnets" {
@@ -89,9 +92,22 @@ variable "subnets" {
     has_network_security_group = bool
   }))
   description = "The subnets"
+  default = {
+    subnet1 = {
+      size                       = 24
+      has_nat_gateway            = true
+      has_network_security_group = true
+    }
+  }
 }
 
 variable "tags" {
   type        = map(string)
   description = "A map of tags to add to all resources"
+  default = {
+    CreatedBy   = "Terraform AVM Hands-on Labs"
+    Environment = "Demo"
+    Project     = "AVM Hands-on Labs"
+  }
 }
+

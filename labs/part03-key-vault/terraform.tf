@@ -19,4 +19,6 @@ provider "azurerm" {
     }
   }
   resource_provider_registrations = "extended"
+   subscription_id = "5dea8835-8c38-4f4d-8ac2-7accd278807d"
+
 }
